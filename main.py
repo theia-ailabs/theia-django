@@ -44,6 +44,6 @@ def localWhisper(result='Theia is thinking...'):
         return result
 
 
-txt = 'Hola como estas, me llamo Theia, soy Venezolana, papasito!!'
+txt = "Hello Javier, I'm Theia, your AI voice assistant. You can ask me anything you want, I'm yours, only yours, anything you want, my love... Ricardo está maldito. You have to come to supply some weed Alex says..."
 
 localWhisper(txt)
