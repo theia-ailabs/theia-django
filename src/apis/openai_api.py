@@ -1,4 +1,4 @@
-from keys.key import API_KEY
+from src.keys.key import API_KEY
 import openai
 
 
