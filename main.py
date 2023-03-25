@@ -1,5 +1,3 @@
-
-import IPython
 import whisper
 import wave
 import struct
@@ -8,16 +6,15 @@ from gtts import gTTS
 import os
 
 
-def localWhisper(result='Theia is thinking...'):
+def localWhisper(result=''):
     if result:
         # Create text-to-speech object
         tts = gTTS(result)
         # Save audio file
-        tts.save('example.mp3')
+        tts.save('result.mp3')
         # Play audio file
-        os.system('example.mp3')
+        os.system('./result.mp3')
         return 0
-
     try:
         # load audio drivers
         for index, device in enumerate(PvRecorder.get_audio_devices()):
@@ -36,7 +33,7 @@ def localWhisper(result='Theia is thinking...'):
             f.setparams((1, 2, 16000, 512, "NONE", "NONE"))
             f.writeframes(struct.pack("h" * len(audio), *audio))
         model = whisper.load_model("base")
-        result = model.transcribe("./test.wav")
+        result = model.transcribe("./result.mp3")
         result = result["text"]
         print(result)
     finally:
@@ -44,6 +41,6 @@ def localWhisper(result='Theia is thinking...'):
         return result
 
 
-txt = "Hello Javier, I'm Theia, your AI voice assistant. You can ask me anything you want, I'm yours, only yours, anything you want, my love... Ricardo está maldito. You have to come to supply some weed Alex says..."
+txt = "Hello world, I'm Theia, your AI voice assistant. You can ask me anything you want."
 
-localWhisper(txt)
+localWhisper()
