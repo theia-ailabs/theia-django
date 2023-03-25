@@ -1,4 +1,4 @@
-#!/home/quantium/labs/gaia-ai/server/gaia-server/bin/python
+#!/home/quantium/labs/theia-ai/server/theia-server/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

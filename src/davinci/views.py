@@ -3,6 +3,6 @@ from django.http import HttpResponse
 
 from apis.openai_api import davinci
 
-def index(request):
+def davinciEX(request):
     HttpResponse(davinci('What is El Quijote?'))
 
