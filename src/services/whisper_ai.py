@@ -14,7 +14,7 @@ def localWhisper():
             print(f"[{index}] {device}")
         # init recorder driver
         recorder = PvRecorder(device_index=-1, frame_length=512)
-        path = 'result.wav'
+        path = 'input.wav'
         audio = []
         recorder.start()
         while True:
@@ -26,7 +26,7 @@ def localWhisper():
             f.setparams((1, 2, 16000, 512, "NONE", "NONE"))
             f.writeframes(struct.pack("h" * len(audio), *audio))
         model = whisper.load_model("base")
-        text = model.transcribe("./result.wav")
+        text = model.transcribe(path)
         text = text["text"]
         print('\n', text)
         result = davinci(text)
