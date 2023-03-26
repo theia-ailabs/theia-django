@@ -1,7 +1,7 @@
 # Server views.py
 from django.http import HttpResponse
 from django.http import JsonResponse
-from services.whisper_ai import localWhisper
+from services.whisper_ai import theiaWhispers
 
 
 def welcome(request):
@@ -11,12 +11,12 @@ def welcome(request):
 async def theia(request):
 
     if request.method == 'POST':
-        question = request.POST.get('my_string')
-        answer = await localWhisper(question)
+        question = request.POST.get('question')
+        answer = await theiaWhispers(question)
         response = {
             'status': 200,  # Success response
-            'audio': answer,
-            'text': answer
+            'audio': answer.audio,
+            'text': answer.text
         }
         return JsonResponse(response)
     else:

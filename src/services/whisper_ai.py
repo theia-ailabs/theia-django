@@ -6,6 +6,19 @@ from services.apis.openai_api import davinci
 from services.reader_ai import femaleReader
 
 
+def theiaWhispers(audio):
+    model = whisper.load_model("base")
+    text = model.transcribe(audio)
+    text = text["text"]
+    print('\n', text)
+    result = davinci(text)
+    print('\n', result)
+    return {
+        'audio': femaleReader(result),
+        'text': text
+    }
+
+
 def localWhisper():
     result = ''
     try:
