@@ -24,7 +24,7 @@ async def theia(request):
         return JsonResponse(response)
     else:
         response_error = {
-            'status': 404
+            'status': 404,
             'error': 'Invalid request method',
 
         }
