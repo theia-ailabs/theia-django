@@ -14,7 +14,7 @@ def voiceReader(txt='Hello, World!'):
     return 0
 
 
-def femaleReader(txt='Hello, World!', lang='en'):
+def femaleReader(txt='Hello, World!', lang='es'):
     tts = gTTS(text=txt, lang=lang, slow=False)
     tts.save("theia.wav")
     os.system("mpg123 theia.wav tempo 2.5")
