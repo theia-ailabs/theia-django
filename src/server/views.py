@@ -3,7 +3,7 @@ import asyncio
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
-from services.whispher_ai import localWhispher
+from services.whisper_ai import localWhisper
 
 
 def welcome(request):
@@ -14,10 +14,10 @@ async def theia(request):
 
     if request.method == 'POST':
         question = request.POST.get('my_string')
-        answer = await localWhispher(question)
+        answer = await localWhisper(question)
         response = {
             'status': 200,  # Success response
-            'answer': answer,
+            'audio': answer,
             'text': answer
         }
         return JsonResponse(response)

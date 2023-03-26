@@ -2,8 +2,8 @@ import whisper
 import wave
 import struct
 from pvrecorder import PvRecorder
-from src.services.apis.openai_api import davinci
-from src.services.reader_ai import femaleReader
+from services.apis.openai_api import davinci
+from services.reader_ai import femaleReader
 
 
 def localWhisper():
