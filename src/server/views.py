@@ -20,7 +20,6 @@ async def theia(request):
             'answer': answer,
             'text': answer
         }
-        # Ask to davinci
         return JsonResponse(response)
     else:
         response_error = {
