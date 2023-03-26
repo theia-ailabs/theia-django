@@ -2,7 +2,7 @@ import openai
 from src.keys.key import API_KEY
 
 
-def davinci(prompt, _api_key=API_KEY, engine=4):
+def davinci(prompt, _api_key=API_KEY, engine=3):
     openai.api_key = _api_key
     res = openai.Completion.create(
         engine='text-davinci-00'+str(engine),

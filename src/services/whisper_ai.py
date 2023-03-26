@@ -3,7 +3,7 @@ import wave
 import struct
 from pvrecorder import PvRecorder
 from src.services.apis.openai_api import davinci
-from src.services.reader_ai import voiceReader
+from src.services.reader_ai import femaleReader
 
 
 def localWhisper():
@@ -31,7 +31,7 @@ def localWhisper():
         print('\n', text)
         result = davinci(text)
         print('\n', result)
-        voiceReader(result)
+        femaleReader(result)
     finally:
         recorder.delete()
         return result
