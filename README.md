@@ -3,5 +3,13 @@
 Python server built with Django.
 
 ```
-python src/manage.py runserver
+source env/bin/activate
+```
+
+```
+pip install -r requirements.txt
+```
+
+```
+poetry run manage.py runserver
 ```
