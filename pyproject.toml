@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "server"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+name = "theia-server"
+version = "1.0.0"
+description = "Theia Server"
+authors = ["Theia Labs <github.com/theia-ailabs>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

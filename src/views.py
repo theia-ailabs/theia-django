@@ -1,7 +1,7 @@
 # Server views.py
 from django.http import HttpResponse
 from django.http import JsonResponse
-from services.whisper_ai import theiaWhispers
+from src.services.whisper_ai import theiaWhispers
 
 
 def welcome(request):
